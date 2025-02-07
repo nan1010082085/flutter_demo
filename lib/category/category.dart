@@ -61,20 +61,26 @@ class _CategoryPageState extends State<CategoryPage> {
                 ),
               ),
               SizedBox(
-                  width: constraints.maxWidth,
-                  height: constraints.maxHeight - 300 - 20,
-                  child: GridView.count(
-                    crossAxisCount: 3,
-                    children: List.generate(40, (index) {
-                      return SizedBox(
+                width: constraints.maxWidth,
+                height: constraints.maxHeight - 300 - 20,
+                child: GridView.count(
+                  crossAxisCount: 3,
+                  children: List.generate(40, (index) {
+                    return Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.teal),
+                            borderRadius: BorderRadius.all(Radius.circular(8))),
                         height: 100,
                         child: Center(
                           child: Text('data ${index}'),
                         ),
-                      );
-                    }),
-                  ),
+                      ),
+                    );
+                  }),
                 ),
+              ),
             ],
           );
         },

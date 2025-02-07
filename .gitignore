@@ -12,6 +12,11 @@
 .swiftpm/
 migrate_working_dir/
 
+# jks properties
+*.jks
+*/*.jks
+*/*.properties
+
 # IntelliJ related
 *.iml
 *.ipr
